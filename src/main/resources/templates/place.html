@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+<head>
+<meta charset="UTF-8">
+<title>Post List</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/layout.css}">
+<style>
+.category {
+	display: flex;
+	flex-direction: row;
+}
+
+.hidden {
+	display: none;
+}
+
+.filter_btn {
+	width: 130px;
+	height: 40px;
+	border: 2px solid #000;
+	background: transparent;
+	cursor: pointer;
+	margin: 10px 30px 10px 30px;
+	border-radius: 5px;
+	font-size: 17px;
+}
+
+.reset_btn {
+	width: 130px;
+	height: 40px;
+	border: 2px solid #000;
+	background: transparent;
+	cursor: pointer;
+	margin: 10px 30px 10px 30px;
+	border-radius: 5px;
+	font-size: 17px;
+}
+
+.filter_btn:hover {
+	background-color: black;
+	color: white;
+}
+
+.post_wrapper {
+	display: flex;
+	align-item: center;
+	justify-content: center;
+	background-color: blue;
+}
+
+.post {
+	background-color: gold;
+	margin: 15px;
+	align-item: center;
+	text-align: center;
+	width: 300px;
+	height: 300px;
+}
+</style>
+</head>
+<section layout:fragment="content">
+	<h2>"도시이름" 관광명소</h2>
+	<div class="category">
+		<button class="reset_btn" onclick="filterReset()" >리셋</button>
+		<button class="filter_btn" th:each="dto : ${themaList}"
+			th:text="${dto.name}" th:value="${dto.name}" onclick="filter(this)"></button>
+	</div>
+	<script>
+		function filter(button) {
+			var buttonValue = button.value;
+			console.log("버튼 값:", buttonValue);
+			
+			// 모든 div 숨기기
+			var divs = document.querySelectorAll(".thema");
+			divs.forEach(function(div) {
+				div.classList.add("hidden");
+			});
+
+			// 버튼의 값과 일치하는 div 보이기
+			var targetDiv = document.querySelector(".thema[data-name='" + buttonValue + "']");
+			if (targetDiv) {
+				targetDiv.classList.remove("hidden");
+			}
+		}
+		
+		function filterReset() {
+			var allDivs = document.querySelectorAll(".thema");
+			allDivs.forEach(function(div) {
+				div.classList.remove("hidden");
+			});
+		}
+	</script>
+	<div class="thema" th:each="dto : ${themaList}" th:data-name="${dto.name}">
+		<h3 th:text="${dto.name}"></h3>
+		<div class="post_wrapper">
+			<a th:href="@{post_view}"><div id="first_post" class="post">1</div></a>
+			<div class="post">2</div>
+			<div class="post">3</div>
+			<div class="post">4</div>
+			<div class="post">5</div>
+		</div>
+		<a class="deoBogi" th:href="@{place/(param=${dto.name})}">더보기</a>
+	</div>
+</section>
+</html>

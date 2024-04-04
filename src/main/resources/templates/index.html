@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+<head>
+<!-- 제이쿼리 -->
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<!-- 슬릭슬라이더 -->
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<script type="text/javascript"
+	src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<title>Mock-up MainPage</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/layout.css}">
+<link rel="stylesheet" type="text/css" th:href="@{/css/index.css}">
+</head>
+<body>
+	<section layout:fragment="content">
+		<form class="search_box" action="" method="get">
+			<input class="search_text" type="text" placeholder="검색어를 입력하세요.">
+			<button class="search_button" type="submit">검색</button>
+		</form>
+		<div class="post-slider">
+			<div class=></div>
+			<h2 class="sider-title">Treding Posts 숙소</h2>
+			<div class="post-wrapper1">
+				<div class="post"></div>
+				<div class="post"></div>
+				<div class="post"></div>
+				<div class="post"></div>
+				<div class="post"></div>
+			</div>
+		</div>
+		<div class="post-slider">
+			<h2 class="sider-title">Treding Posts 관광</h2>
+			<div class="post-wrapper2">
+				<div class="post"></div>
+				<div class="post"></div>
+				<div class="post"></div>
+				<div class="post"></div>
+				<div class="post"></div>
+			</div>
+		</div>
+		<div class="post-slider">
+			<h2 class="sider-title">Treding Posts 식당</h2>
+			<div class="post-wrapper3">
+				<div class="post"></div>
+				<div class="post"></div>
+				<div class="post"></div>
+				<div class="post"></div>
+				<div class="post"></div>
+			</div>
+		</div>
+		<script th:src="@{/js/index.js}"></script>
+	</section>
+</html>

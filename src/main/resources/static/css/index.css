@@ -1,0 +1,30 @@
+.post {
+	background-image:
+		url(https://cdn.pixabay.com/photo/2023/01/08/08/40/road-7704729_1280.jpg);
+	height: 410px;
+	margin: 10px;
+}
+
+.post-wrapper1, .post-wrapper2, .post-wrapper3 {
+	display: flex;
+	align-items: center;
+}
+
+.slick-arrow {
+	height: 50px;
+	color: black;
+	background-color: white;
+	border: none;
+	font-size: 30px;
+	display: flex;
+	align-item: center;
+}
+
+.slick-arrow:hover {
+	color: white;
+	background-color: black;
+}
+
+.post_menu {
+	display:none;
+}

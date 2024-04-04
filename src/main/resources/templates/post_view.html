@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Post View</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/layout.css}">
+<script async
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKP8531At7kaKdV8wqNOqDep7lSbV8BsM&callback=initMap">
+	
+</script>
+<style>
+#map {
+	height: 500px;
+	width: 300px;
+}
+</style>
+</head>
+<body>
+	<div id="map"></div>
+	<script>
+	window.initMap = function(){
+		  let myLatLng = { lat: -25.363, lng: 131.044 };
+		  let map = new google.maps.Map(document.getElementById("map"), {
+		    zoom: 4,
+		    center: myLatLng,
+		    disableDefaultUI: true,
+		  });
+
+		  new google.maps.Marker({
+		    position: myLatLng,
+		    map, 
+		  });
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+header {
+	display: flex;
+	justify-content: space-between;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	margin: 1em;
+	padding: 1em;
+	background-color: green;
+}
+
+#search_menu {
+	display: flex;
+	justify-content: center;
+}
+
+.logo {
+	color: inherit;
+	text-decoration: none;
+}
+
+.search_box {
+	display: flex;
+	justify-content: center;
+}
+
+.post_menu {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.post_wirte_btn {
+	width: 130px;
+	height: 40px;
+	border: 2px solid #000;
+	background: transparent;
+	cursor: pointer;
+	margin: 10px 30px 10px 30px;
+	border-radius: 5px;
+	font-size: 17px;
+}
+
+.post_wirte_btn:hover {
+	background-color: black;
+	color: white;
+}

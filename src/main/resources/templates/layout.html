@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+	<header>
+		<h1>
+			<a class="logo" th:href="@{/}">Trip-Track</a>
+		</h1>
+		<div id="login">
+			<div>로그인</div>
+			<div>회원가입</div>
+		</div>
+	</header>
+	<nav>
+		<ul id="search_menu">
+			<li><a th:href="@{place}">관광</a></li>
+			<li><a th:href="@{rest}">식당</a></li>
+			<li><a th:href="@{acc}">숙소</a></li>
+		</ul>
+	</nav>
+	<div class="post_menu">
+		<button class="post_wirte_btn" onclick="postWrite()">글쓰기</button>
+	</div>
+	<script>
+	function postWrite() {
+		location.href = "/post_write";
+	}
+	</script>
+	<th:block layout:fragment="content"></th:block>
+	<footer> </footer>
+</body>
+</html>
