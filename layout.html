@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<!-- 스와이퍼 슬라이더 cdn -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+	<header>
+		<nav class="menu_bar">
+			<div class="logo">
+				<h1>
+					<a th:href="@{/}">Trip-Track</a>
+				</h1>
+			</div>
+			<div class="main_menu">
+				<div class="menu_item">
+					<a th:href="@{/}">리뷰</a>
+				</div>
+				<div class="menu_item">
+					<a th:href="@{/}">살펴보기</a>
+				</div>
+				<div class="menu_item">
+					<a th:href="@{/}">트랙 작성</a>
+				</div>
+				<div class="menu_item">
+					<a th:href="@{/}">문의 사항</a>
+				</div>
+			</div>
+			<div class="login_menu">
+				<div class="menu_item">
+					<a th:href="@{/}">로그인</a>
+				</div>
+				<div class="menu_item">
+					<a th:href="@{/}">회원가입</a>
+				</div>
+			</div>
+		</nav>
+		<div class="search_bar">
+			<form id="searchForm" action="/search" method="GET">
+				<input onkeyup="enterkey()" type="search" name="searchValue"
+					placeholder="여행지, 식당, 숙소 검색..." />
+			</form>
+		</div>
+	</header>
+	<th:block layout:fragment="content"></th:block>
+	<footer> </footer>
+</body>
+</html>

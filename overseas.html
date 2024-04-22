@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" layout:decorate="~{layout}">
+<head>
+<meta charset="UTF-8">
+<title>해외정보</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/layout.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/location_country.css}">
+</head>
+<body>
+	<section layout:fragment="content">
+		<div class="location_info">
+			<div class="location_banner">
+				<div class="swiper main_slide">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img
+								src="https://cdn.pixabay.com/photo/2022/08/05/05/59/korea-7366036_1280.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img
+								src="https://cdn.pixabay.com/photo/2018/04/08/23/19/wood-3302802_1280.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img
+								src="https://cdn.pixabay.com/photo/2018/09/09/08/24/sunset-3664096_1280.jpg">
+						</div>
+					</div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</div>
+			</div>
+			<div class="location_intro">
+				<h1>대충 이름</h1>
+				<h3>대충 설명</h3>
+			</div>
+			<div class="location_cityList">
+				<h1>많이 찾는 국가</h1>
+				<div class="swiper cityList_slide">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a th:href="@{/}">
+								<div class="thumbnail">
+									<img
+										src="https://cdn.pixabay.com/photo/2022/08/05/05/59/korea-7366036_1280.jpg">
+								</div>
+								<h3>대충 이름</h3>
+								<h4>대충 태그</h4>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a th:href="@{/}">
+								<div class="thumbnail">
+									<img
+										src="https://cdn.pixabay.com/photo/2022/08/05/05/59/korea-7366036_1280.jpg">
+								</div>
+								<h3>대충 이름</h3>
+								<h4>대충 태그</h4>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a th:href="@{/}">
+								<div class="thumbnail">
+									<img
+										src="https://cdn.pixabay.com/photo/2022/08/05/05/59/korea-7366036_1280.jpg">
+								</div>
+								<h3>대충 이름</h3>
+								<h4>대충 태그</h4>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a th:href="@{/}">
+								<div class="thumbnail">
+									<img
+										src="https://cdn.pixabay.com/photo/2022/08/05/05/59/korea-7366036_1280.jpg">
+								</div>
+								<h3>대충 이름</h3>
+								<h4>대충 태그</h4>
+							</a>
+						</div>
+					</div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" th:src="@{/js/location_country.js}"></script>
+	</section>
+</body>
+</html>

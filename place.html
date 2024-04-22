@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" layout:decorate="~{layout}">
+<head>
+<meta charset="UTF-8">
+<title>홈</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/layout.css}">
+<link rel="stylesheet" type="text/css" th:href="@{/css/postList.css}">
+</head>
+<body>
+	<section layout:fragment="content">
+		<div class="filter_box">
+			<div class="location_filter_box">
+				<label th:each="locationDto:${locationList}">
+					<span>
+						<input type="checkbox" th:value="${locationDto.city_name}" th:text="${locationDto.city_name}">
+					</span>
+				</label>
+			</div>
+			<div class="tag_filter_box">
+				<label th:each="tagDto:${tagList}" th:if="${tagDto.category_id == 1}">
+					<span>
+						<input type="checkbox" th:value="${tagDto.thema_name}" th:text="${tagDto.thema_name}">
+					</span>
+				</label>
+			</div>
+		</div>
+		<div class="post_box">
+			<div class="post">
+				<div class="thumbnail">썸네일</div>
+				<div class="title">장소명</div>
+				<div class="star_point">별점</div>
+				<div class="location">서울</div>
+				<div class="tag">테마파크,박물관</div>
+			</div>
+			<div class="post">
+				<div class="thumbnail">썸네일</div>
+				<div class="title">장소명</div>
+				<div class="star_point">별점</div>
+				<div class="location">서울</div>
+				<div class="tag">테마파크</div>
+			</div>
+			<div class="post">
+				<div class="thumbnail">썸네일</div>
+				<div class="title">장소명</div>
+				<div class="star_point">별점</div>
+				<div class="location">대전</div>
+				<div class="tag">박물관</div>
+			</div>
+			<div class="post">
+				<div class="thumbnail">썸네일</div>
+				<div class="title">장소명</div>
+				<div class="star_point">별점</div>
+				<div class="location">부산</div>
+				<div class="tag">미술관</div>
+			</div>
+			<div class="post">
+				<div class="thumbnail">썸네일</div>
+				<div class="title">장소명</div>
+				<div class="star_point">별점</div>
+				<div class="location">대전</div>
+				<div class="tag">미술관</div>
+			</div>
+		</div>
+		<script type="text/javascript" th:src="@{/js/postList.js}"></script>
+	</section>
+</body>
+</html>

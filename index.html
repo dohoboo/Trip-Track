@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" layout:decorate="~{layout}">
+<head>
+<meta charset="UTF-8">
+<title>홈</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/layout.css}">
+<link rel="stylesheet" type="text/css" th:href="@{/css/index.css}">
+</head>
+<body>
+	<section layout:fragment="content">
+		<div class="filter_wrapper">
+			<div class="filter">
+<!-- 				<a class="location_overseas" th:href="@{/overseas}" target="_blank">국외</a>  -->
+<!-- 				<a class="location_domestic" th:href="@{/domestic}" target="_blank">국내</a>  -->
+				<a class="category_place" th:href="@{/place}" target="_blank">관광</a> 
+				<a class="category_acc" th:href="@{/acc}" target="_blank">숙소</a> 
+				<a class="category_rest" th:href="@{/rest}" target="_blank">식당</a>
+			</div>
+		</div>
+		<div class="main_banner">
+			<div class="swiper main_slide">
+			  <div class="swiper-wrapper">
+			    <div class="swiper-slide">
+			    	<a class="" th:href="@{/}" target="_blank">
+			    		<img src="https://cdn.pixabay.com/photo/2019/08/10/03/15/bridge-4396131_1280.jpg">			    		
+			    	</a>
+			    	<h2 class="banner_title">중국으로 떠나보십시오! 놀라운 경험이 여러분을 기다립니다.</h2>
+			    </div>
+			    <div class="swiper-slide">
+			    	<a class="" th:href="@{/}" ta rget="_blank">
+			    		<img src="https://cdn.pixabay.com/photo/2021/08/03/14/07/river-6519572_1280.jpg">			    		
+			    	</a>
+			    	<h2 class="banner_title">유럽의 매력 속으로 : 가장 많은 사용자 추천 유럽의 도시</h2>
+			    </div>
+			    <div class="swiper-slide">
+			    	<a class="" th:href="@{/}" target="_blank">
+			    		<img src="https://cdn.pixabay.com/photo/2017/12/11/21/17/bridge-3013297_1280.jpg">		    		
+			    	</a>
+			    	<h2 class="banner_title">지금 이 시기, 트래킹을 위한 공원과 관광지</h2>
+			    </div>
+			    <div class="swiper-slide">
+			    	<a class="" th:href="@{/}" target="_blank">
+			    		<img src="https://cdn.pixabay.com/photo/2018/08/16/08/39/hallstatt-3609863_1280.jpg">		    		
+			    	</a>
+			    	<h2 class="banner_title">우리가 몰랐던 오스트리아 - 할슈타트 집중 탐구</h2>
+			    </div>
+			    <div class="swiper-slide">
+			    	<a class="" th:href="@{/}" target="_blank">
+			    		<img src="https://cdn.pixabay.com/photo/2016/11/29/10/07/tiger-1868911_1280.jpg">			    		
+			    	</a>
+			    	<h2 class="banner_title">동물 애호가를 위한 여행 코스 10</h2>
+			    </div>		    
+			  </div>
+			  <div class="swiper-button-next"></div>
+			  <div class="swiper-button-prev"></div>
+			  <div class="swiper-pagination"></div>
+			</div>
+		</div>
+		<div class="best_post_banner">
+			<div class="place_banner">
+				<h2>베스트 관광</h2>
+				<h3>이용자들이 가장 많이 찾는 관광지</h3>
+				<div class="swiper place_slide">
+				  <div class="swiper-wrapper">
+				    <div class="swiper-slide">
+				    	<a class="" th:href="@{/}" target="_blank">	   
+				    		<img src="https://cdn.pixabay.com/photo/2019/08/10/03/15/bridge-4396131_1280.jpg">
+				    	</a>
+				    	<div class="">장소 이름</div>
+				    	<div>별점 들어갈 장소</div>
+				    	<div>태그</div>
+				    </div>
+				    <div class="swiper-slide">
+				    	<a class="" th:href="@{/}" target="_blank">	   
+				    		<img src="https://cdn.pixabay.com/photo/2019/08/10/03/15/bridge-4396131_1280.jpg">
+				    	</a>
+				    	<div class="">장소 이름</div>
+				    	<div>별점 들어갈 장소</div>
+				    	<div>태그</div>
+				    </div>
+				    <div class="swiper-slide">
+				    	<a class="" th:href="@{/}" target="_blank">	   
+				    		<img src="https://cdn.pixabay.com/photo/2019/08/10/03/15/bridge-4396131_1280.jpg">
+				    	</a>
+				    	<div class="">장소 이름</div>
+				    	<div>별점 들어갈 장소</div>
+				    	<div>태그</div>
+				    </div>
+				    <div class="swiper-slide">
+				    	<a class="" th:href="@{/}" target="_blank">	   
+				    		<img src="https://cdn.pixabay.com/photo/2019/08/10/03/15/bridge-4396131_1280.jpg">
+				    	</a>
+				    	<div class="">장소 이름</div>
+				    	<div>별점 들어갈 장소</div>
+				    	<div>태그</div>
+				    </div>
+				    <div class="swiper-slide">
+				    	<a class="" th:href="@{/}" target="_blank">	   
+				    		<img src="https://cdn.pixabay.com/photo/2019/08/10/03/15/bridge-4396131_1280.jpg">
+				    	</a>
+				    	<div class="">장소 이름</div>
+				    	<div>별점 들어갈 장소</div>
+				    	<div>태그</div>
+				    </div>	    
+				  </div>
+				  <div class="swiper-button-next"></div>
+				  <div class="swiper-button-prev"></div>
+				</div>						
+			</div>
+			<div class="place_banner">
+				<h2>베스트 관광</h2>
+				<h3>이용자들이 가장 많이 찾는 관광지</h3>
+				<div class="swiper place_slide">
+				  <div class="swiper-wrapper">
+				    <div class="swiper-slide">
+				    	<a class="" th:href="@{/}" target="_blank">	   
+				    		<img src="https://cdn.pixabay.com/photo/2019/08/10/03/15/bridge-4396131_1280.jpg">
+				    	</a>
+				    	<div class="">장소 이름</div>
+				    	<div>별점 들어갈 장소</div>
+				    	<div>태그</div>
+				    </div>
+				    <div class="swiper-slide">
+				    	<a class="" th:href="@{/}" target="_blank">	   
+				    		<img src="https://cdn.pixabay.com/photo/2019/08/10/03/15/bridge-4396131_1280.jpg">
+				    	</a>
+				    	<div class="">장소 이름</div>
+				    	<div>별점 들어갈 장소</div>
+				    	<div>태그</div>
+				    </div>
+				    <div class="swiper-slide">
+				    	<a class="" th:href="@{/}" target="_blank">	   
+				    		<img src="https://cdn.pixabay.com/photo/2019/08/10/03/15/bridge-4396131_1280.jpg">
+				    	</a>
+				    	<div class="">장소 이름</div>
+				    	<div>별점 들어갈 장소</div>
+				    	<div>태그</div>
+				    </div>
+				    <div class="swiper-slide">
+				    	<a class="" th:href="@{/}" target="_blank">	   
+				    		<img src="https://cdn.pixabay.com/photo/2019/08/10/03/15/bridge-4396131_1280.jpg">
+				    	</a>
+				    	<div class="">장소 이름</div>
+				    	<div>별점 들어갈 장소</div>
+				    	<div>태그</div>
+				    </div>
+				    <div class="swiper-slide">
+				    	<a class="" th:href="@{/}" target="_blank">	   
+				    		<img src="https://cdn.pixabay.com/photo/2019/08/10/03/15/bridge-4396131_1280.jpg">
+				    	</a>
+				    	<div class="">장소 이름</div>
+				    	<div>별점 들어갈 장소</div>
+				    	<div>태그</div>
+				    </div>	    
+				  </div>
+				  <div class="swiper-button-next"></div>
+				  <div class="swiper-button-prev"></div>
+				</div>						
+			</div>
+			<div class="place_banner">
+				<h2>베스트 관광</h2>
+				<h3>이용자들이 가장 많이 찾는 관광지</h3>
+				<div class="swiper place_slide">
+				  <div class="swiper-wrapper">
+				    <div class="swiper-slide">
+				    	<a class="" th:href="@{/}" target="_blank">	   
+				    		<img src="https://cdn.pixabay.com/photo/2019/08/10/03/15/bridge-4396131_1280.jpg">
+				    	</a>
+				    	<div class="">장소 이름</div>
+				    	<div>별점 들어갈 장소</div>
+				    	<div>태그</div>
+				    </div>
+				    <div class="swiper-slide">
+				    	<a class="" th:href="@{/}" target="_blank">	   
+				    		<img src="https://cdn.pixabay.com/photo/2019/08/10/03/15/bridge-4396131_1280.jpg">
+				    	</a>
+				    	<div class="">장소 이름</div>
+				    	<div>별점 들어갈 장소</div>
+				    	<div>태그</div>
+				    </div>
+				    <div class="swiper-slide">
+				    	<a class="" th:href="@{/}" target="_blank">	   
+				    		<img src="https://cdn.pixabay.com/photo/2019/08/10/03/15/bridge-4396131_1280.jpg">
+				    	</a>
+				    	<div class="">장소 이름</div>
+				    	<div>별점 들어갈 장소</div>
+				    	<div>태그</div>
+				    </div>
+				    <div class="swiper-slide">
+				    	<a class="" th:href="@{/}" target="_blank">	   
+				    		<img src="https://cdn.pixabay.com/photo/2019/08/10/03/15/bridge-4396131_1280.jpg">
+				    	</a>
+				    	<div class="">장소 이름</div>
+				    	<div>별점 들어갈 장소</div>
+				    	<div>태그</div>
+				    </div>
+				    <div class="swiper-slide">
+				    	<a class="" th:href="@{/}" target="_blank">	   
+				    		<img src="https://cdn.pixabay.com/photo/2019/08/10/03/15/bridge-4396131_1280.jpg">
+				    	</a>
+				    	<div class="">장소 이름</div>
+				    	<div>별점 들어갈 장소</div>
+				    	<div>태그</div>
+				    </div>	    
+				  </div>
+				  <div class="swiper-button-next"></div>
+				  <div class="swiper-button-prev"></div>
+				</div>						
+			</div>
+		</div>
+		<script type="text/javascript" th:src="@{/js/index.js}"></script>
+	</section>
+</body>
+</html>
