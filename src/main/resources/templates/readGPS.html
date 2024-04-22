@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=eb9600d8bae80e414e2826b3b5ebedc6&libraries=services"></script>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div id="map" style="width:500px;height:400px;"></div>
+<form id="latlng" action="inputGPS.do" method="post">
+	<div id="latlngbox"></div>
+	<p id="ptag"></p>
+	</form>
+<div>
+	<table>
+		<tr th:each="dto : ${list}">
+		<td>
+		<input name="lat" type="text" th:value="${dto.lat}">
+		<input name="lng" type="text" th:value="${dto.lng}">
+		<input name="placeName" type="text" th:value="${dto.placeName}">
+		</td>
+		</tr>
+	</table>
+</div>
+<div>
+	<input type="button" onclick="displayMarker()">
+</div>
+<script th:src="@{/viewMarker.js}"></script>
+</body>
+</html>
